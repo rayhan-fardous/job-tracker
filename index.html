@@ -10,6 +10,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
   <!-- Tailwind CSS -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    *{
+      font-family: "Inter", sans-serif;
+    }
+  </style>
 
 </head>
 <body class="bg-gray-100 mx-[18%]">
@@ -36,7 +41,24 @@
 
   <!-- Available Jobs Section -->
 
+  <div class="flex flex-col sm:flex-row justify-between sm:items-end mb-8 gap-3">
+    <h2 class="text-xl font-bold text-blue-950">Available Jobs</h2>
+    <span class="text-sm text-slate-500 font-medium"><span id="tab-jobs-count">8 </span>jobs  </span>
+  </div>
+
+  <div class="flex gap-2 mb-8" id="tabs-container">
+    <button class="tab-btn active bg-blue-500 text-white border border-blue-500 px-8 py-2 rounded-sm text-sm font-medium transition-colors" data-tab="all">All</button>
+
+    <button class="tab-btn bg-white text-slate-500 border border-slate-200 hover:bg-slate-50 px-5 py-2 rounded-sm text-sm font-medium transition-colors" data-tab="interview">Interview</button>
+
+    <button class="tab-btn bg-white text-slate-500 border border-slate-200 hover:bg-slate-50 px-5 py-2 rounded-sm text-sm font-medium transition-colors" data-tab="rejected">Rejected</button>
+  </div>
 
 
+
+
+
+
+  <script src="/scripts/script.js"></script>
 </body>
 </html>
