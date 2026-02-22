@@ -3,10 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Job Tracker</title>
+  <title>Job Application Tracker</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
 </head>
-<body>
-  <h1 class="text-red-500">Hello</h1>
+<body class="bg-gray-100 mx-[18%]">
+  <header class="space-y-4">
+    <div>
+      <h1 class="text-2xl font-bold text-blue-950 mt-10">Job Application Tracker</h1>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div class="bg-white p-4 rounded-md border border-gray-200">
+        <p class="text-sm font-medium text-gray-800">Total</p>
+        <p id="stat-total" class="text-blue-950 text-2xl font-bold">0</p>
+      </div>
+      <div class="bg-white p-4 rounded-md border border-gray-200">
+        <p class="text-sm font-medium text-gray-800">Interview</p>
+        <p id="stat-total" class="text-emerald-500 text-2xl font-bold">0</p>
+      </div>
+      <div class="bg-white p-4 rounded-md border border-gray-200">
+        <p class="text-sm font-medium text-gray-800">Rejected</p>
+        <p id="stat-total" class="text-red-500 text-2xl font-bold">0</p>
+      </div>
+    </div>
+    <hr class="border-slate-200 mb-8"/>
+  </header>
+
+  <!-- Available Jobs Section -->
+
+
+
 </body>
 </html>
