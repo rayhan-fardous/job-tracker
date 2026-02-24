@@ -113,7 +113,10 @@ function renderJobs(){
     return job.status === currentTab;
   });
 
-  jobsCount.textContent = filteredJobs.length;
+  jobsCount.innerText =
+  currentTab === "all"
+    ? bdJobs.length
+    : `${filteredJobs.length} of ${bdJobs.length}`;
 
   if(filteredJobs.length === 0){
     jobsContainer.classList.add("hidden");
