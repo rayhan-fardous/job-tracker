@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <!-- Fontawesome cdn -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Tailwind CSS -->
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <style>
@@ -25,15 +27,15 @@
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
       <div class="bg-white p-4 rounded-md border border-gray-200">
         <p class="text-sm font-medium text-gray-800">Total</p>
-        <p id="stat-total" class="text-blue-950 text-2xl font-bold">0</p>
+        <p id="total" class="text-blue-950 text-2xl font-bold">8</p>
       </div>
       <div class="bg-white p-4 rounded-md border border-gray-200">
         <p class="text-sm font-medium text-gray-800">Interview</p>
-        <p id="stat-total" class="text-emerald-500 text-2xl font-bold">0</p>
+        <p id="interview" class="text-emerald-500 text-2xl font-bold">0</p>
       </div>
       <div class="bg-white p-4 rounded-md border border-gray-200">
         <p class="text-sm font-medium text-gray-800">Rejected</p>
-        <p id="stat-total" class="text-red-500 text-2xl font-bold">0</p>
+        <p id="rejected" class="text-red-500 text-2xl font-bold">0</p>
       </div>
     </div>
     <hr class="border-slate-200 mb-8"/>
@@ -43,20 +45,20 @@
 
   <div class="flex flex-col sm:flex-row justify-between sm:items-end mb-8 gap-3">
     <h2 class="text-xl font-bold text-blue-950">Available Jobs</h2>
-    <span class="text-sm text-slate-500 font-medium"><span id="tab-jobs-count">8 </span>jobs  </span>
+    <span class="text-sm text-slate-500 font-medium"><span id="jobs-count" class="mr-1">8</span>jobs</span>
   </div>
 
-  <div class="flex gap-2 mb-8" id="tabs-container">
+  <div class="flex sm:flex-row gap-2 mb-8" id="tabs-container">
     <button class="tab-btn active bg-blue-500 text-white border border-blue-500 px-8 py-2 rounded-sm text-sm font-medium transition-colors" data-tab="all">All</button>
 
-    <button class="tab-btn bg-white text-slate-500 border border-slate-200 hover:bg-slate-50 px-5 py-2 rounded-sm text-sm font-medium transition-colors" data-tab="interview">Interview</button>
+    <button class="tab-btn bg-white text-slate-500 border border-slate-200 hover:bg-slate-50 hover:text-blue-700 px-5 py-2 rounded-sm text-sm font-medium transition-colors" data-tab="interview">Interview</button>
 
-    <button class="tab-btn bg-white text-slate-500 border border-slate-200 hover:bg-slate-50 px-5 py-2 rounded-sm text-sm font-medium transition-colors" data-tab="rejected">Rejected</button>
+    <button class="tab-btn bg-white text-slate-500 border border-slate-200 hover:bg-slate-50 hover:text-blue-700 px-5 py-2 rounded-sm text-sm font-medium transition-colors" data-tab="rejected">Rejected</button>
   </div>
 
   <div id="jobs-container" class="space-y-4"></div>
 
-  <div id="empty-state" class="hidden bg-white rounded-xl shadow-md border border-slate-100 p-16 flex flex-col items-center justify-center text-center mt-4 space-y-2">
+  <div id="empty-container" class="hidden bg-white rounded-xl shadow-md border border-slate-100 p-16 flex-col items-center justify-center text-center mt-4 space-y-2">
 
     <img src="/assets/jobs.png" alt="" width="65">
     <h3 class="text-lg font-bold text-gray-800">No jobs available</h3>
