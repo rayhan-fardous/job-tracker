@@ -133,12 +133,14 @@ function renderJobs(){
       card.className = "job-card bg-white rounded-lg p-5 md:p-6 shadow-[0px_2px_8px_rgba(0,0,0,0.04)] border border-slate-100 flex flex-col gap-2 relative";
 
       let badgeText = "NOT APPLIED";
-      let badgeClass = "bg-yellow-100/70 text-orange-500";
+      let badgeClass = "bg-yellow-100/70 text-orange-300";
 
       if(job.status === "interview"){
+        card.classList.add("job-interview");
         badgeText = "INTERVIEWING";
         badgeClass = "bg-emerald-50 text-emerald-600 border border-emerald-100";
       }else if(job.status === "rejected"){
+        card.classList.add("job-rejected");
         badgeText = "REJECTED";
         badgeClass = "bg-red-50 text-red-600 border border-red-100";
       }
@@ -155,7 +157,7 @@ function renderJobs(){
 
       card.innerHTML = `<div class="flex justify-between items-start">
                     <h3 class="font-bold text-[#1e293b] text-base md:text-lg">${job.company}</h3>
-                    <button class="delete-btn text-slate-400 hover:text-red-500 transition-colors p-1" data-id="${job.id}" title="Delete Job">
+                    <button class="delete-btn text-slate-400 hover:text-red-500 transition-colors py-1 px-1.5 rounded-full bg-gray-100   hover:bg-red-200" data-id="${job.id}" title="Delete Job">
                         <i class="fa-regular fa-trash-can"></i>
                     </button>
                 </div>
